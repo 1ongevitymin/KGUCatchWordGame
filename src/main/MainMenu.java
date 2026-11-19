@@ -25,7 +25,7 @@ public class MainMenu {
 		main.setLayout(new GridLayout(5, 1));
 
 		// 사용자 정보 버튼 이미지 추가
-		ImageIcon userInfoIcon = new ImageIcon("imgs/userInfo.jpg");
+		ImageIcon userInfoIcon = new ImageIcon("resources/imgs/userInfo.jpg");
 		JButton userInfoButton = new JButton();
 		userInfoButton.setIcon(userInfoIcon);
 		JLabel userInfoLabel = new JLabel("사용자 정보"); // 사용자 정보를 라벨로 추가
@@ -36,7 +36,7 @@ public class MainMenu {
 		userInfoButton.add(Box.createHorizontalGlue());
 
 		// 랭킹 버튼 이미지 추가
-		ImageIcon rankingIcon = new ImageIcon("imgs/ranking.jpg");
+		ImageIcon rankingIcon = new ImageIcon("resources/imgs/ranking.jpg");
 		JButton rankingButton = new JButton();
 		rankingButton.setIcon(rankingIcon);
 		JLabel rankingLabel = new JLabel("랭킹");
@@ -47,7 +47,7 @@ public class MainMenu {
 		rankingButton.add(Box.createHorizontalGlue());
 
 		// 게임모드 버튼 이미지 추가
-		ImageIcon gameModeIcon = new ImageIcon("imgs/gameWindow.jpg");
+		ImageIcon gameModeIcon = new ImageIcon("resources/imgs/gameWindow.jpg");
 		JButton gameModeButton = new JButton();
 		gameModeButton.setIcon(gameModeIcon);
 		JLabel gameModeLabel = new JLabel("게임 START");
@@ -58,7 +58,7 @@ public class MainMenu {
 		gameModeButton.add(Box.createHorizontalGlue());
 
 		// 게임설명 버튼 이미지 추가
-		ImageIcon explainGameIcon = new ImageIcon("imgs/explainGame.jpg");
+		ImageIcon explainGameIcon = new ImageIcon("resources/imgs/explainGame.jpg");
 		JButton explainGameButton = new JButton();
 		explainGameButton.setIcon(explainGameIcon);
 		JLabel explainGameLabel = new JLabel("게임설명");
@@ -69,7 +69,7 @@ public class MainMenu {
 		explainGameButton.add(Box.createHorizontalGlue());
 
 		// 게임종료 버튼 이미지 추가
-		ImageIcon exitGameIcon = new ImageIcon("imgs/exitGame.jpg");
+		ImageIcon exitGameIcon = new ImageIcon("resources/imgs/exitGame.jpg");
 		JButton exitGameButton = new JButton();
 		exitGameButton.setIcon(exitGameIcon);
 		JLabel exitGameLabel = new JLabel("게임 종료");
@@ -180,7 +180,7 @@ public class MainMenu {
 		// 패널 생성
 		JPanel userInfoPanel = new JPanel() {
 			protected void paintComponent(Graphics g) {
-				Image background = new ImageIcon("imgs/Join.jpg").getImage();
+				Image background = new ImageIcon("resources/imgs/Join.jpg").getImage();
 				g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
 				setOpaque(false);
 				super.paintComponent(g);
@@ -239,7 +239,7 @@ public class MainMenu {
 			// 패널 생성
 			JPanel rank = new JPanel() {
 				protected void paintComponent(Graphics g) {
-					Image background = new ImageIcon("imgs/RankingGround.jpg").getImage(); // 배경 이미지
+					Image background = new ImageIcon("resources/imgs/RankingGround.jpg").getImage(); // 배경 이미지
 					g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
 					setOpaque(false);
 					super.paintComponent(g);
@@ -336,7 +336,7 @@ public class MainMenu {
 	public JPanel ExplainGamePanel() {
 		JPanel explain = new JPanel() {
 			protected void paintComponent(Graphics g) {
-				Image background = new ImageIcon("imgs/ExplainGround.jpg").getImage();
+				Image background = new ImageIcon("resources/imgs/ExplainGround.jpg").getImage();
 				g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
 				setOpaque(false);
 
@@ -354,7 +354,7 @@ public class MainMenu {
 				+ "모든 라운드를 성공적으로 완료하거나 시간이 모두 소진될 때 게임이 종료됩니다.<br><br>" + "<b>아이템:</b><br>" 
 				+ "1~3단계까지는 일시정지 아이템을 사용할 수 있습니다!<br>" + "그리고 4, 5단계에서는 일시정지 아이템 뿐만 아니라 '힌트' 아이템과 '시간추가' 아이템 중 하나를 사용할 수 있습니다.<br>"
 				+ " '힌트' 를 사용할 경우 지금 눌러야 할 버튼에 빨간 테두리가 나오며, '시간 추가' 아이템은 10초가 추가됩니다.<br>" + "한 게임 당 둘 중 하나만 사용 가능하니 신중히 사용하세요!<br><br>"
-				+ "<b>장애물:</b><br>" + "3단계부터는 장애물이 있습니다. 5초에 한 번씩 다음 두 가지 장애물이 등장합니다.<br>1) 암전 - 배경이 어두워지며 목표 단어가 가려집니다. 우상단의 '스위치' 버튼을 누르면 다시 밝아질 수 있어요!"
+				+ "<b>장애물:</b><br>" + "3단계부터는 장애물이 있습니다. 7초에 한 번씩 다음 두 가지 장애물이 등장합니다.<br>1) 암전 - 배경이 어두워지며 목표 단어가 가려집니다. 우상단의 '스위치' 버튼을 누르면 다시 밝아질 수 있어요!"
 				+ "<br>2) 글자 가려짐 - 랜덤으로 세개의 버튼의 글자가 없어질 거예요. 그럴 땐 우상단의 연필 아이콘을 눌러보세요! 다시 글자가 등장합니다.<br><br>" 
 				+ "<b>점수 계산 및 종료:</b><br>"
 				+ "각 라운드를 완료하면 점수가 누적되고, 최종적으로 남은 시간을 기준으로 추가 점수가 계산됩니다.<br>"

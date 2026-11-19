@@ -54,7 +54,7 @@ public class JoinFrame {
 		
 		JPanel mainPanel = new JPanel() {
 			protected void paintComponent(Graphics g) {
-				Image background = new ImageIcon("imgs/Join.jpg").getImage();
+				Image background = new ImageIcon("resources/imgs/Join.jpg").getImage();
 				g.drawImage(background, 0, 0,getWidth(), getHeight(), this);
 				setOpaque(false);
 				

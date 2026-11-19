@@ -5,7 +5,7 @@ import javax.swing.*;
 import main.MainFrame;
 
 public class ScorePanel extends JPanel {
-	Image gameBackGround = new ImageIcon("imgs/gameWindow.jpg").getImage();
+	Image gameBackGround = new ImageIcon("resources/imgs/gameWindow.jpg").getImage();
 	private boolean transitionInProgress = false;
 	
 	public void paintComponent(Graphics g) {

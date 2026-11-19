@@ -55,7 +55,7 @@ public class LoginFrame {
 		
 		JPanel mainPanel = new JPanel() {
 			protected void paintComponent(Graphics g) {
-				Image background = new ImageIcon("imgs/Login.jpg").getImage();
+				Image background = new ImageIcon("resources/imgs/Login.jpg").getImage();
 				g.drawImage(background, 0, 0,getWidth(), getHeight(), this);
 				setOpaque(false);
 				

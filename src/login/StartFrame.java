@@ -29,7 +29,7 @@ public class StartFrame extends JFrame{
         startPanel.setLayout(new BorderLayout());
         
         JLabel titleLabel = new JLabel("Catch Word", SwingConstants.CENTER);
-        ImageIcon icon = new ImageIcon("imgs/Start.jpg");
+        ImageIcon icon = new ImageIcon("resources/imgs/Start.jpg");
         JButton startButton = new JButton(icon);
 
         startPanel.add(startButton);

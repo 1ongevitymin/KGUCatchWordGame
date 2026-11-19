@@ -14,7 +14,7 @@ public class Button extends BasicButtonUI {
         b.setBackground(new Color(255,0,0,0));
         
         //버튼에 이미지 입히기
-        Image brick=new ImageIcon("imgs/brick.png").getImage();
+        Image brick=new ImageIcon("resources/imgs/brick.png").getImage();
         g2.drawImage(brick, 0, 0, b.getWidth(), b.getHeight(), b);
         // 텍스트 색상과 스타일 설정
         g2.setFont(new Font("돋움", Font.BOLD, 30));

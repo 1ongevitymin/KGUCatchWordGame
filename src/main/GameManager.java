@@ -22,8 +22,8 @@ public class GameManager {
 	static ArrayList<PlayerRecord> recordList = new ArrayList<>();
 	String userId = null;
 	String userPw = null;
-	File playerTxt = new File("player.txt");
-	File recordTxt = new File("record.txt");
+	File playerTxt = new File("data/player.txt");
+	File recordTxt = new File("data/record.txt");
 
 	JoinFrame J;
 	LoginFrame L;
@@ -119,7 +119,7 @@ public class GameManager {
 	void join() {
 		try {
 			// 만들 파일 이름 및 경로 지정
-			File playerFile = new File("player.txt");
+			File playerFile = new File("data/player.txt");
 			// Scanner playerScan = openFile(playerFile);
 
 			// 파일 생성
@@ -140,7 +140,7 @@ public class GameManager {
 			playerWriter.close();
 
 			
-			File recordFile = new File("record.txt");
+			File recordFile = new File("data/record.txt");
 			// Scanner recordScan = openFile(recordFile);
 			
 			recordFile.createNewFile();
@@ -250,6 +250,12 @@ public class GameManager {
 	Scanner openFile(File f) {
 		Scanner filein = null;
 		try {
+			// 데이터 파일이 없으면(처음 실행) 빈 파일을 만든다
+			if (!f.exists()) {
+				if (f.getParentFile() != null)
+					f.getParentFile().mkdirs();
+				f.createNewFile();
+			}
 			filein = new Scanner(f);
 		} catch (Exception e) {
 			System.out.printf("파일 오픈 실패: %s\n", f);

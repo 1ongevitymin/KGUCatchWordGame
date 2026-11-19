@@ -22,19 +22,19 @@ import java.util.Set;
 import main.*;
 
 public class Catchword extends JPanel implements ActionListener {
-	Image gameBackGround = new ImageIcon("imgs/gameWindow.jpg").getImage();
+	Image gameBackGround = new ImageIcon("resources/imgs/gameWindow.jpg").getImage();
 	ImageIcon lockIcon = new ImageIcon(
-			new ImageIcon("imgs/lock.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+			new ImageIcon("resources/imgs/lock.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 	ImageIcon pencilIcon = new ImageIcon(
-			new ImageIcon("imgs/pencil.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+			new ImageIcon("resources/imgs/pencil.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 	ImageIcon swichIcon = new ImageIcon(
-			new ImageIcon("imgs/swich.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+			new ImageIcon("resources/imgs/swich.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 	Random random = new Random();
 	// 파일에서 단어 로드
 	private JButton penButton;
 	private JButton swichButton;
 	private Set<JButton> lockedButtons = new HashSet<>();
-	private ArrayList<String> words = loadWordsFromFile("words.txt");
+	private ArrayList<String> words = loadWordsFromFile("data/words.txt");
 	private int currentWordIndex;
 	private String targetWord;
 	private JLabel timerLabel;
@@ -155,7 +155,7 @@ public class Catchword extends JPanel implements ActionListener {
 		topPanel.add(targetPanel, BorderLayout.CENTER);
 		
 		//일시정지 버튼
-		ImageIcon pauseIcon = new ImageIcon("imgs/pause.png");
+		ImageIcon pauseIcon = new ImageIcon("resources/imgs/pause.png");
 		pauseButton = new JButton();
 		pauseButton.setIcon(pauseIcon);
 		pauseButton.setOpaque(false); 
@@ -163,14 +163,14 @@ public class Catchword extends JPanel implements ActionListener {
 		pauseButton.setBackground(new Color(255,0,0,0));
 
 		//힌트 버튼
-		ImageIcon hintIcon = new ImageIcon("imgs/hint.png");
+		ImageIcon hintIcon = new ImageIcon("resources/imgs/hint.png");
 		hintButton = new JButton();
 		hintButton.setIcon(hintIcon);
 		hintButton.setOpaque(false); 
 		hintButton.setBorder(null);
 		hintButton.setBackground(new Color(255,0,0,0));
 		//시간추가 버튼
-		ImageIcon addTimeIcon = new ImageIcon("imgs/addTime.png");
+		ImageIcon addTimeIcon = new ImageIcon("resources/imgs/addTime.png");
 		addTimeButton = new JButton();
 		addTimeButton.setIcon(addTimeIcon);
 		addTimeButton.setOpaque(false); 
@@ -441,7 +441,7 @@ public class Catchword extends JPanel implements ActionListener {
 		isPaused = !isPaused;
 		if (isPaused) {
 			timer.stop();
-			ImageIcon returnIcon = new ImageIcon("imgs/return.png");
+			ImageIcon returnIcon = new ImageIcon("resources/imgs/return.png");
 			pauseButton.setIcon(returnIcon);
 			pauseButton.setOpaque(false); 
 			pauseButton.setBorder(null);
